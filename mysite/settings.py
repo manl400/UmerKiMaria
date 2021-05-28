@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', 'umerkimaria.herokuapp.com', '.umerkimaria.com']
 
@@ -131,4 +131,4 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 #    os.path.join(BASE_DIR, 'static'),
 #)
 
-SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = False
