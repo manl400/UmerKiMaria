@@ -1,19 +1,9 @@
 from django.db import models
 
 class Event(models.Model):
-    NewYork = 'New York City, NY'
-    Normal = 'Normal, IL'
-    Karachi = 'Karachi, Pakistan'
-    LOCATIONS = (
-        (NewYork, 'New York City, NY'),
-        (Normal, 'Normal, IL'),
-        (Karachi, 'Karachi, Pakistan')
-    )
-
     title = models.CharField(max_length=30)
     description = models.TextField()
-    location = models.CharField(max_length=30, choices=LOCATIONS, default=NewYork)
-    address = models.CharField(max_length=140)
+    ImageURL = models.CharField(max_length=255, default='https://i.imgur.com/CcY947L.jpg')
     timeline = models.TextField()
     dressCode = models.TextField()
     duration = models.DurationField()
